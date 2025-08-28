@@ -47,8 +47,8 @@ app.post('/api/llm', async (req, res) => {
     if (choice?.message?.content) {
       assistant.content = choice.message.content;
     }
-      if (choice?.message?.function_call) {
-        assistant.function_call = choice.message.function_call;
+    if (choice?.message?.function_call) {
+      assistant.function_call = choice.message.function_call;
     }
     res.json({ assistant });
   } catch (err) {
