@@ -41,11 +41,14 @@ app.post('/api/llm', async (req, res) => {
       })
     });
     const j = await resp.json();
+    console.log(JSON.stringify(j, null, 2));
     const choice = j.choices?.[0];
     const assistant = { content: '', function_call: null };
-    if (choice?.message) {
-      assistant.content = choice.message.content || '';
-      if (choice.message.function_call) assistant.function_call = choice.message.function_call;
+    if (choice?.message?.content) {
+      assistant.content = choice.message.content;
+    }
+      if (choice?.message?.function_call) {
+        assistant.function_call = choice.message.function_call;
     }
     res.json({ assistant });
   } catch (err) {
