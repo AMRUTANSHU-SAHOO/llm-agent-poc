@@ -25,7 +25,7 @@ llm-agent-poc/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/llm-agent-poc.git
+   git clone https://github.com/AMRUTANSHU-SAHOO/llm-agent-poc.git
    cd llm-agent-poc
    ```
 
